@@ -38,8 +38,10 @@ strokeWeight(0);
 }
 
 function mousePressed() {
-  // Função feita com auxilio de AI (apenas a parte com som)
-    if (mouseX >= 65 && mouseX <= 833 && mouseY >= 58 && mouseY <= 744) {
+
+    if (mouseX >= 65 && mouseX <= 833 && mouseY >= 58 && mouseY <= 744) {  
+      
+      // Função feita com auxilio de AI (apenas a parte com som)
       if (mouseX < 350) {
       morte.currentTime = 0;
       morte.play().catch(e => {});
