@@ -5,7 +5,7 @@ let c_azul = '#57B0E3';
 
 async function setup() {
   //som
-  campainha = await loadSound('mp3/campainha.MP3');
+  // campainha = await loadSound('mp3/campainha.MP3');
   erro = await loadSound('mp3/erro.MP3');
   morte = await loadSound('mp3/morte.MP3');
   
@@ -46,8 +46,8 @@ function mousePressed() {
       morte.currentTime = 0;
       morte.play().catch(e => {});
     } else if (mouseX < 600) {
-      campainha.currentTime = 0;
-      campainha.play().catch(e => {});
+      // campainha.currentTime = 0;
+      // campainha.play().catch(e => {});
     } else {
       erro.currentTime = 0;
       erro.play().catch(e => {});
