@@ -5,9 +5,9 @@ let c_azul = '#57B0E3';
 
 async function setup() {
   //som
-  campainha = await loadSound('/mp3/campainha.MP3');
-  erro = await loadSound('/mp3/erro.MP3');
-  morte = await loadSound('/mp3/morte.MP3');
+  campainha = await loadSound('mp3/campainha.MP3');
+  erro = await loadSound('mp3/erro.MP3');
+  morte = await loadSound('mp3/morte.MP3');
   
   //canvas
   let cnv = createCanvas(900, 800);
