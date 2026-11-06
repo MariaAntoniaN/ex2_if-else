@@ -1,8 +1,15 @@
+//cores
 let c_rosa = '#F37B89';
 let c_amarelo = '#FBEC86';
 let c_azul = '#57B0E3';
 
-function setup() {
+async function setup() {
+  //som
+  campainha = await loadSound('/mp3/campainha.MP3');
+  erro = await loadSound('/mp3/erro.MP3');
+  morte = await loadSound('/mp3/morte.MP3');
+  
+  //canvas
   let cnv = createCanvas(900, 800);
   let x = (windowWidth - width) / 2;
   let y = (windowHeight - height) / 2;
@@ -31,16 +38,31 @@ strokeWeight(0);
 }
 
 function mousePressed() {
+  // Função feita com auxilio de AI (apenas a parte com som)
     if (mouseX >= 65 && mouseX <= 833 && mouseY >= 58 && mouseY <= 744) {
+      if (mouseX < 350) {
+      morte.currentTime = 0;
+      morte.play().catch(e => {});
+    } else if (mouseX < 600) {
+      campainha.currentTime = 0;
+      campainha.play().catch(e => {});
+    } else {
+      erro.currentTime = 0;
+      erro.play().catch(e => {});
+    }
+   
+    // Função da mudança de cores
     let colors = ['#FBEC86','#57B0E3','#F37B89'];
     let baralharcores = shuffle(colors);
     c_rosa = baralharcores[0];
     c_azul = baralharcores[1];
     c_amarelo = baralharcores[2];
+
   }
 
 }
 
+// Função feita com auxilio da AI - Modificar a escala dos triangulos
 function customTriangle(x1, y1, x2, y2, x3, y3) {
   let cx = (x1 + x2 + x3) / 3;
   let cy = (y1 + y2 + y3) / 3;
@@ -60,6 +82,7 @@ function customTriangle(x1, y1, x2, y2, x3, y3) {
   pop();
 }
 
+// Triangulos 
 function rosa() {
   
 //coluna 1
