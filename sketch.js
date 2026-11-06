@@ -3,11 +3,11 @@ let c_rosa = '#F37B89';
 let c_amarelo = '#FBEC86';
 let c_azul = '#57B0E3';
 
-function setup() {
+async function setup() {
   //som
-  campainha = await loadSound('mp3/campainha.MP3');
-  erro = await loadSound('mp3/erro.MP3');
-  morte = await loadSound('mp3/morte.MP3');
+  // campainha = await loadSound('mp3/campainha.MP3');
+  // erro = await loadSound('mp3/erro.MP3');
+  // morte = await loadSound('mp3/morte.MP3');
   
   //canvas
   let cnv = createCanvas(900, 800);
@@ -41,17 +41,17 @@ function mousePressed() {
 
     if (mouseX >= 65 && mouseX <= 833 && mouseY >= 58 && mouseY <= 744) {  
       
-      // Função feita com auxilio de AI (apenas a parte com som)
-      if (mouseX < 350) {
-      morte.currentTime = 0;
-      morte.play().catch(e => {});
-    } else if (mouseX < 600) {
-      campainha.currentTime = 0;
-      campainha.play().catch(e => {});
-    } else {
-      erro.currentTime = 0;
-      erro.play().catch(e => {});
-    }
+    //   // Função feita com auxilio de AI (apenas a parte com som)
+    //   if (mouseX < 350) {
+    //   morte.currentTime = 0;
+    //   morte.play().catch(e => {});
+    // } else if (mouseX < 600) {
+    //   campainha.currentTime = 0;
+    //   campainha.play().catch(e => {});
+    // } else {
+    //   erro.currentTime = 0;
+    //   erro.play().catch(e => {});
+    // }
    
     // Função da mudança de cores
     let colors = ['#FBEC86','#57B0E3','#F37B89'];
