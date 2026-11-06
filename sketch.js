@@ -41,6 +41,13 @@ function mousePressed() {
 
     if (mouseX >= 65 && mouseX <= 833 && mouseY >= 58 && mouseY <= 744) {  
       
+      // Função da mudança de cores
+    let colors = ['#FBEC86','#57B0E3','#F37B89'];
+    let baralharcores = shuffle(colors);
+    c_rosa = baralharcores[0];
+    c_azul = baralharcores[1];
+    c_amarelo = baralharcores[2];
+
       // Função feita com auxilio de AI (apenas a parte com som)
       if (mouseX < 350) {
       morte.currentTime = 0;
@@ -53,12 +60,7 @@ function mousePressed() {
       erro.play().catch(e => {});
     }
    
-    // Função da mudança de cores
-    let colors = ['#FBEC86','#57B0E3','#F37B89'];
-    let baralharcores = shuffle(colors);
-    c_rosa = baralharcores[0];
-    c_azul = baralharcores[1];
-    c_amarelo = baralharcores[2];
+    
 
   }
 
