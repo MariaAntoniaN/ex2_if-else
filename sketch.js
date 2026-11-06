@@ -3,7 +3,7 @@ let c_rosa = '#F37B89';
 let c_amarelo = '#FBEC86';
 let c_azul = '#57B0E3';
 
-async function setup() {
+function setup() {
   //som
   campainha = await loadSound('mp3/campainha.MP3');
   erro = await loadSound('mp3/erro.MP3');
